@@ -20,9 +20,17 @@
     
     self.title = @"MVVM开发模式";
     
+    UIButton *pushBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 50)];
+    pushBtn.center = self.view.center;
+    [pushBtn setTitle:@"pushMVVMVC" forState:UIControlStateNormal];
+    pushBtn.backgroundColor = [UIColor redColor];
+    [pushBtn addTarget:self action:@selector(pushBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pushBtn];
+    
 }
 
-- (IBAction)pushBtnClick:(UIButton *)sender
+
+- (void)pushBtnClick
 {
     MvvmViewController *VC = [[MvvmViewController alloc] init];
     [self.navigationController pushViewController:VC animated:YES];

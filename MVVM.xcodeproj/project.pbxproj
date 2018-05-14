@@ -17,6 +17,10 @@
 		2EAAD2F120A95D9B0057189C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EAAD2EF20A95D9B0057189C /* LaunchScreen.storyboard */; };
 		2EAAD2F420A95D9C0057189C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAAD2F320A95D9C0057189C /* main.m */; };
 		2ED15A7E20A96A0F005535B5 /* MvvmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15A7D20A96A0F005535B5 /* MvvmViewController.m */; };
+		2ED15A8120A96E24005535B5 /* MvvmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15A8020A96E24005535B5 /* MvvmModel.m */; };
+		2ED15A8420A96E36005535B5 /* MvvmModelF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15A8320A96E36005535B5 /* MvvmModelF.m */; };
+		2ED15A8720A96FA4005535B5 /* MvvmViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15A8620A96FA4005535B5 /* MvvmViewControllerCell.m */; };
+		2ED15A8D20A9724D005535B5 /* MvvmCellBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED15A8C20A9724C005535B5 /* MvvmCellBackView.m */; };
 		D77430D8FC658AF27148CCCC /* libPods-MVVM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F576905FA90261D12CD7B87B /* libPods-MVVM.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,14 @@
 		2EAAD2F320A95D9C0057189C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ED15A7C20A96A0F005535B5 /* MvvmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmViewController.h; sourceTree = "<group>"; };
 		2ED15A7D20A96A0F005535B5 /* MvvmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmViewController.m; sourceTree = "<group>"; };
+		2ED15A7F20A96E24005535B5 /* MvvmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmModel.h; sourceTree = "<group>"; };
+		2ED15A8020A96E24005535B5 /* MvvmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmModel.m; sourceTree = "<group>"; };
+		2ED15A8220A96E36005535B5 /* MvvmModelF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmModelF.h; sourceTree = "<group>"; };
+		2ED15A8320A96E36005535B5 /* MvvmModelF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmModelF.m; sourceTree = "<group>"; };
+		2ED15A8520A96FA4005535B5 /* MvvmViewControllerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmViewControllerCell.h; sourceTree = "<group>"; };
+		2ED15A8620A96FA4005535B5 /* MvvmViewControllerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmViewControllerCell.m; sourceTree = "<group>"; };
+		2ED15A8B20A9724C005535B5 /* MvvmCellBackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MvvmCellBackView.h; sourceTree = "<group>"; };
+		2ED15A8C20A9724C005535B5 /* MvvmCellBackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MvvmCellBackView.m; sourceTree = "<group>"; };
 		441A66510304FAC246E23F40 /* Pods-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		59B42740B4ACFEEA23B23B6F /* Pods-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM/Pods-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		F576905FA90261D12CD7B87B /* libPods-MVVM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +83,10 @@
 		2E6BC1ED20A9655200274307 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2ED15A8220A96E36005535B5 /* MvvmModelF.h */,
+				2ED15A8320A96E36005535B5 /* MvvmModelF.m */,
+				2ED15A7F20A96E24005535B5 /* MvvmModel.h */,
+				2ED15A8020A96E24005535B5 /* MvvmModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,6 +94,10 @@
 		2E6BC1EE20A9655200274307 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2ED15A8520A96FA4005535B5 /* MvvmViewControllerCell.h */,
+				2ED15A8620A96FA4005535B5 /* MvvmViewControllerCell.m */,
+				2ED15A8B20A9724C005535B5 /* MvvmCellBackView.h */,
+				2ED15A8C20A9724C005535B5 /* MvvmCellBackView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,11 +316,15 @@
 			files = (
 				2ED15A7E20A96A0F005535B5 /* MvvmViewController.m in Sources */,
 				2EAAD2F420A95D9C0057189C /* main.m in Sources */,
+				2ED15A8420A96E36005535B5 /* MvvmModelF.m in Sources */,
 				2E6BC1F220A9655200274307 /* ViewController.m in Sources */,
 				2E6BC1F620A9655A00274307 /* AppDelegate.m in Sources */,
 				2E6BC20420A9669A00274307 /* CESHttpTool.m in Sources */,
+				2ED15A8120A96E24005535B5 /* MvvmModel.m in Sources */,
 				2E6BC20120A9667500274307 /* UIView+Frame.m in Sources */,
+				2ED15A8720A96FA4005535B5 /* MvvmViewControllerCell.m in Sources */,
 				2E6BC20020A9667500274307 /* Tool.m in Sources */,
+				2ED15A8D20A9724D005535B5 /* MvvmCellBackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

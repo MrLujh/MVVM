@@ -25,11 +25,8 @@ View <-> C <-> ViewModel <->Model
 ##MVVM(View-ViewManger-C-ViewModel-Model)
 ![image](https://github.com/lovemo/MVVMFramework/raw/master/resources/MVVMFrameWork-Thinking.png)
 - [View - 用来呈现用户界面](#1)
-- [ViewManger - 用来处理View的常规事件，负责管理View](#2)
 - [Controller - 负责ViewManger和ViewModel之间的绑定，负责控制器本身的生命周期。](#3)
 - [ViewModel - 存放各种业务逻辑和网络请求](#4)
-
-====
 
 &emsp;&emsp;这种设计的目的是保持View和Model的高度纯洁，提高可扩展性和复用度。在日常开发中，ViewModel是为了拆分Controller业务逻辑而存在的，所以ViewModel需要提供公共的服务接口，以便为Controller提供数据。而ViewManger的作用相当于一个小管家，帮助Controller来分别管理每个subView，ViewManger负责接管来自View的事件，也负责接收来自Controller的模型数据，而View进行自己所负责的视图数据绑定工作。Controller则是最后的大家长，负责将ViewModel和ViewManger进行绑定，进行数据转发工作。把合适的数据模型分发给合适的视图管理者。
 

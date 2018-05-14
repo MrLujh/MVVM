@@ -62,7 +62,6 @@
     // cell背景View
     CGFloat cardViewH = CardViewHeigth;
     self.cellBackViewFrame = CGRectMake(cardViewX, cardViewY, cardViewW, cardViewH);
-    
 }
 
 @end

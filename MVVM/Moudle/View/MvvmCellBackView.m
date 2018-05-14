@@ -102,7 +102,6 @@
     // 卡背景图片
     [self sd_setImageWithURL:[NSURL URLWithString:model.image]];
     
-    
     // 商铺名字
     _shopNameView.text = model.shopsname;
     

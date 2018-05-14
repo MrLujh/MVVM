@@ -39,7 +39,9 @@ View <-> C <-> ViewModel <->Model
 
 ## 架构讲解
 
+![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec_01.png)
 
+![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec_02.png)
 
 ## 期待
 * 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）

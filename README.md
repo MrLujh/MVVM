@@ -1,10 +1,10 @@
 # MVVM 开发模式
 
-#浅谈MVVM
+# 浅谈MVVM
 
 项目开发中，用的比较多的就是MVC，高级一点的就会用MVVM，因为后者开发比较灵活，界面便于维护。另外一种MVP，开发中的比较少，主流的就是MVC，MVVM。个人比较偏爱MVVM，在项目中用的比较多。
 
-##概述
+## 概述
 [引用自iOS应用架构谈](http://www.cocoachina.com/ios/20150525/11919.html)
 
 &emsp;&emsp;MVVM的出现主要是为了解决在开发过程中Controller越来越庞大的问题，变得难以维护，所以MVVM把数据加工的任务从Controller中解放了出来，使得Controller只需要专注于数据调配的工作，ViewModel则去负责数据加工并通过通知机制让View响应ViewModel的改变。

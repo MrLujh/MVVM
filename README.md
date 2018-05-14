@@ -54,9 +54,6 @@ View <-> C <-> ViewModel <->Model
 ####如果想获取关于本项目的最新情况，请持续关注github。
 ####项目传送门：[点击进入](https://github.com/lovemo/MVVMFramework)
     
-```
-
-### <a id="demo效果"></a> demo效果
 - 只需实现加载请求以及配置自定义cell和上述代码，就能轻松实现以下效果，最重要的是代码解耦。
 
 ![image](https://github.com/lovemo/MVVMFramework/raw/master/resources/demo.gif)

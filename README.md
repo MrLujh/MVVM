@@ -36,25 +36,6 @@ View <-> C <-> ViewModel <->Model
 
 ##架构讲解
 
-<img src="https://github.com/lovemo/MVVMFramework/raw/master/resources/screenshot.png" height="500">
-
-&emsp;&emsp;以上图做为讲解demo，最然很简单，但是也能够很好的阐述了，理解思想才是最重要的。
-首先我们来拆分这个页面，第一个为控制器。暂且命名为MyController，上面有两个直接子视图，按钮MyBtn和页面比较复杂的子视图MyView，MyView中有MyViewBtn1和MyViewBtn2还有一个MyViewLabel视图。
-具体结构如下：
-- [MyController](#11)
-    - [MyBtn](#12)
-    - [MyView](#13)
-        - [MyViewBtn1](#14)
-        - [MyViewBtn2](#15)
-        - [MyViewLabel](#16)
-
-&emsp;&emsp;界面分析完了，现在可以进行代码的架构工作了。
-首先需要建立一个ViewModel，使它能够源源不断的进行数据的生产，并提供数据给MyController；然后建立一个ViewManger负责管理MyView，当然，Model模型数据必不可少。这些工作完成之后，代码结构变为：
-- [Controller  - - 存放MyController](#21)
-- [ViewModel - - 存放MyViewModel](#22)
-- [View  - - 存放MyView](23)
-- [ViewManger - - 存放MyViewManger](#24)
-- [Model - - 存放MyModel](#25)
 
 &emsp;&emsp;控制器中的代码结构如下图：
 

@@ -43,6 +43,23 @@ View <-> C <-> ViewModel <->Model
 
 ![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec_02.png)
 
+* viewMode层 根据返回的数据 提前计算好所有控件的frame
+
+* 数据处理
+
+```objc 
+ // 模型转换视图模型 MvvmModel -> MvvmModelF
+           
+            for (MvvmModel *mvvmModel in arr) {
+                
+                MvvmModelF *modelF = [[MvvmModelF alloc] init];
+                
+                modelF.model = [MvvmModel mj_objectWithKeyValues:mvvmModel];
+                
+                [self.data addObject:modelF];
+            }
+```      
+	    
 ## 期待
 * 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）
 * 如果在使用过程中发现功能不够用，希望你能Issues我，我非常想为这个框架增加更多好用的功能，谢谢

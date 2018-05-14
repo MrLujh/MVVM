@@ -2,7 +2,7 @@
 
 #浅谈MVVM
 
-&emsp;&emsp;做iOS开发也有一段时间了，最近闲暇之余学习研究了下MVVM，每个人对架构和设计模式都有不同的理解，在此记录下我对MVVM的一些小见解，仅供参考，欢迎批评指正。
+项目开发中，用的比较多的就是MVC，高级一点的就会用MVVM，因为后者开发比较灵活，界面便于维护。另外一种MVP，开发中的比较少，主流的就是MVC，MVVM。个人比较偏爱MVVM，在项目中用的比较多。
 
 ##概述
 [引用自iOS应用架构谈](http://www.cocoachina.com/ios/20150525/11919.html)
@@ -29,20 +29,14 @@ View <-> C <-> ViewModel <->Model
 - [ViewManger - 用来处理View的常规事件，负责管理View](#2)
 - [Controller - 负责ViewManger和ViewModel之间的绑定，负责控制器本身的生命周期。](#3)
 - [ViewModel - 存放各种业务逻辑和网络请求](#4)
-- [Model - 用来呈现数据](#5)
-![image](https://github.com/lovemo/MVVMFramework/raw/master/resources/tree.jpeg)
 
 ====
 
 &emsp;&emsp;这种设计的目的是保持View和Model的高度纯洁，提高可扩展性和复用度。在日常开发中，ViewModel是为了拆分Controller业务逻辑而存在的，所以ViewModel需要提供公共的服务接口，以便为Controller提供数据。而ViewManger的作用相当于一个小管家，帮助Controller来分别管理每个subView，ViewManger负责接管来自View的事件，也负责接收来自Controller的模型数据，而View进行自己所负责的视图数据绑定工作。Controller则是最后的大家长，负责将ViewModel和ViewManger进行绑定，进行数据转发工作。把合适的数据模型分发给合适的视图管理者。
 
-&emsp;&emsp;日常开发中，往往一个视图页面交由一个控制器进行管理，而一个页面上又有N个小的子页面，这就要求我们来对这些视图进行合适的分层处理，拆分视图，将这些视图进行封装，将复杂View抽象成独立的类，不必暴露出具体的实现细节。这样做的好处是，简化应用层的层级复杂度，同时也方便进行管理，视图结构就会变得很清晰。子视图具体的内部事件，可通过代理模式或者Block交由ViewManger处理，因为视图是可以复用的，而其中的事件响应代码往往是根据不同的业务是有差异的。所以可能会有下面两种情况出现：
-- [View很纯洁，需要复用View，若业务逻辑变化则切换ViewManger。](#6)
-- [ViewManger也比较纯洁，若业务逻辑不变，而View需要大变，则切换View即可，保证View中的protocol或者block一致即可<最好是通过协议提前规范好>。](#7)
+&emsp;&emsp;日常开发中，往往一个视图页面交由一个控制器进行管理，而一个页面上又有N个小的子页面，这就要求我们来对这些视图进行合适的分层处理，拆分视图，将这些视图进行封装，将复杂View抽象成独立的类，不必暴露出具体的实现细节。这样做的好处是，简化应用层的层级复杂度，同时也方便进行管理，视图结构就会变得很清晰。
 
-&emsp;&emsp;这样就实现了互相的封装，两者之间只通过protocol或者block进行交流通信，降低了代码的耦合度。尽量使用protocol和category来制定对象之间的通信规范，来降低代码的侵入性。
-
-&emsp;&emsp;这样的架构设计，就像一条生产线，ViewModel进行数据的采集和加工，Controller则进行数据的装配和转发工作，ViewManger进行接收转发分配来的数据，从而进行负责View的展示工作和管理View的事件。这样，不管哪个环节，都是可以更换的，同时也提高了复用性。
+&emsp;&emsp;这样的架构设计，就像一条生产线，ViewModel进行数据的采集和加工，Controller则进行数据的装配和转发工作从而进行负责View的展示工作和管理View的事件。这样，不管哪个环节，都是可以更换的，同时也提高了复用性。
 
 ##架构讲解
 

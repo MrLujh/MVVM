@@ -33,6 +33,7 @@ View <-> C <-> ViewModel <->Model
 &emsp;&emsp;日常开发中，往往一个视图页面交由一个控制器进行管理，而一个页面上又有N个小的子页面，这就要求我们来对这些视图进行合适的分层处理，拆分视图，将这些视图进行封装，将复杂View抽象成独立的类，不必暴露出具体的实现细节。这样做的好处是，简化应用层的层级复杂度，同时也方便进行管理，视图结构就会变得很清晰。
 
 &emsp;&emsp;这样的架构设计，就像一条生产线，ViewModel进行数据的采集和加工，Controller则进行数据的装配和转发工作从而进行负责View的展示工作和管理View的事件。这样，不管哪个环节，都是可以更换的，同时也提高了复用性。
+
 ## 项目代码结构
 
 ![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec.png)
@@ -45,10 +46,11 @@ View <-> C <-> ViewModel <->Model
 
 * viewMode层 根据返回的数据 提前计算好所有控件的frame
 
+
 * 数据处理
 
 ```objc 
- // 模型转换视图模型 MvvmModel -> MvvmModelF
+// 模型转换视图模型 MvvmModel -> MvvmModelF
            
             for (MvvmModel *mvvmModel in arr) {
                 
@@ -58,8 +60,9 @@ View <-> C <-> ViewModel <->Model
                 
                 [self.data addObject:modelF];
             }
-```      
-	    
+```
+      
+ 
 ## 期待
 * 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）
 * 如果在使用过程中发现功能不够用，希望你能Issues我，我非常想为这个框架增加更多好用的功能，谢谢

@@ -42,10 +42,8 @@ View <-> C <-> ViewModel <->Model
 
 ![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec_01.png)
 
+* viewMode层 根据返回的数据 提前计算好所有控件的frame  在model的基础上封装了一个viewMode层
 ![image](https://github.com/MrLujh/MVVM/blob/master/Resource/resourec_02.png)
-
-* viewMode层 根据返回的数据 提前计算好所有控件的frame
-
 
 * 数据处理
 
@@ -61,7 +59,30 @@ View <-> C <-> ViewModel <->Model
                 [self.data addObject:modelF];
             }
 ```
-      
+* cell层数据传递
+
+```objc 
+/*
+ 问题：
+ 1.cell的高度应该提前计算出来
+ 2.cell的高度必须要先计算出每个子控件的frame，才能确定
+ 3.如果在cell的setStatus方法计算子控件的位置，会比较耗性能
+ 
+ 解决:MVVM思想
+ M:模型
+ V:视图
+ VM:视图模型（模型包装视图模型，模型+模型对应视图的frame）
+ */
+- (void)setModelF:(MvvmModelF *)modelF
+{
+    _modelF = modelF;
+   
+    //设置卡frame
+    self.cellBackView.frame = modelF.cellBackViewFrame;
+    self.cellBackView.modelF = modelF;
+} 
+```
+
  
 ## 期待
 * 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）

@@ -83,12 +83,7 @@ View <-> C <-> ViewModel <->Model
 } 
 ```
 
- 
-## 期待
-* 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）
-* 如果在使用过程中发现功能不够用，希望你能Issues我，我非常想为这个框架增加更多好用的功能，谢谢
-
-## 推荐(欢迎补充)<a id="Recommend"></a>
+## 推荐
 ### 应用架构文章
 ##### 部分来自原创微信公众平台-移动开发前线
 * [Service Oriented 的 iOS 应用架构](http://www.cocoachina.com/ios/20160520/16363.html)

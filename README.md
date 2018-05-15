@@ -22,7 +22,7 @@ View <-> C <-> ViewModel <->Model
 
 * 前面扯了那么多，其实归根结底就是一句话：在MVC的基础上，把C拆出一个ViewModel专门负责数据处理的事情，就是MVVM。然后，为了让View和ViewModel之间能够有比较松散的绑定关系，于是我们使用ReactiveCocoa，KVO，Notification，block，delegate和target-action都可以用来做数据通信，从而来实现绑定，但都不如ReactiveCocoa提供的RACSignal来的优雅，如果不用ReactiveCocoa，绑定关系可能就做不到那么松散那么好，但并不影响它还是MVVM。
 
-##MVVM(View-ViewManger-C-ViewModel-Model)
+* MVVM(View-ViewManger-C-ViewModel-Model)
 ![image](https://github.com/lovemo/MVVMFramework/raw/master/resources/MVVMFrameWork-Thinking.png)
 - [View - 用来呈现用户界面](#1)
 - [Controller - 负责ViewManger和ViewModel之间的绑定，负责控制器本身的生命周期。](#3)
